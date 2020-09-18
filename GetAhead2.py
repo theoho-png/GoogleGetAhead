@@ -8,13 +8,18 @@ def isPart(subString):
     return subString in base
 
 if __name__ == "__main__":
-    num = 0
-    if isPart(target) == False:
-        i = 1
-        while isPart(target[i:]) == False or isPart(target[:i]) == False:
-            i += 1
-            if i > len(target):
-                i = len(base)
-                break
+    if len(target) < 1:
+        print("Target string is empty.")
+    elif len(base) < 1:
+        print("Base string is empty.")
+    else:
+        num = 0
+        if isPart(target) == False:
+            i = 1
+            while isPart(target[i:]) == False or isPart(target[:i]) == False:
+                i += 1
+                if i > len(target):
+                    i = len(target)
+                    break
         num = i
-    print(num)
+        print(num)

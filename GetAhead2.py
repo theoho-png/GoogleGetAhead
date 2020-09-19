@@ -21,5 +21,5 @@ if __name__ == "__main__":
                 if i > len(target):
                     i = len(target)
                     break
-        num = i
+            num = i
         print(num)
